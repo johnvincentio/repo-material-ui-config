@@ -52,7 +52,7 @@ const config = {
 		contentBase: path.join(__dirname, 'dist'),
 		compress: false, // true
 		// inline: true,
-		port: 8010,
+		port: 8045,
 		clientLogLevel: 'info',
 		proxy: {
 			'/api/**': { target: 'http://localhost:3001', changeOrigin: true, secure: false }
