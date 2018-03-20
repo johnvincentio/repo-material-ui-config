@@ -5,14 +5,11 @@ import { Switch, Route } from 'react-router-dom';
 
 // import DevTools from './DevTools';
 
-import Main from './Main';
-// import App from '../components/App';
+import Main from '../components/Main';
 
 const Root = ({ store }) => (
 	<Provider store={store}>
 		<div>
-			{' '}
-			{/* comment */}
 			<Switch>
 				<Route path="/" component={Main} />
 			</Switch>
@@ -28,8 +25,3 @@ Root.propTypes = {
 };
 
 export default Root;
-
-/*
-<Route path="/:login/:name" component={RepoPage} />
-<Route path="/:login" component={UserPage} />
-*/

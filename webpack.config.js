@@ -7,15 +7,11 @@ const ASSETS_FOLDER = path.resolve(__dirname, './src/assets');
 const DIST_FOLDER = path.resolve(APP_FOLDER, './dist');
 const DIST_FOLDER_STYLE = path.resolve(DIST_FOLDER, './css');
 
-const INCLUDE_SCSS_FOLDER = path.resolve(__dirname, './src/containers');
+const INCLUDE_SCSS_FOLDER = path.resolve(__dirname, './src/components');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-// Create multiple instances
-// const extractCSS = new ExtractTextPlugin('stylesheets/[name]-one.css');
-// const extractLESS = new ExtractTextPlugin('stylesheets/[name]-two.css');
 
 // const extractCSS = new ExtractTextPlugin({
 // 	filename: '[name].bundle.css',
@@ -37,8 +33,7 @@ const extractSCSSBundle = new ExtractTextPlugin({
 require('dotenv').config(); // load from .env file
 
 const config = {
-	// entry: ['./src/index.jsx'],
-	entry: ['./src/index.jsx', './src/scss/index.scss', './src/containers/main.scss'],
+	entry: ['./src/index.jsx', './src/scss/index.scss', './src/components/main.scss'],
 
 	output: {
 		path: path.resolve('dist'),
@@ -81,22 +76,6 @@ const config = {
 			// 	})
 			// },
 
-			/*
-			const styles = theme => ({
-    drawerPaper: {
-        width: 250
-    }
-});
-
-classes={{
-    paper: classes.drawerPaper,
-}}
-classes={{
-  paper: `SASS_CLASS_NAME_HERE`,
-}}
-
-*/
-
 			{
 				test: /\.(sass|scss)$/,
 				include: INCLUDE_SCSS_FOLDER,
@@ -104,42 +83,6 @@ classes={{
 				use: ['style-loader', 'css-loader', 'sass-loader']
 			},
 
-			// {
-			// 	test: /\.(sass|scss)$/,
-			// 	include: INCLUDE_SCSS_FOLDER,
-			// 	exclude: [SCSS_FOLDER, /node_modules/],
-			// 	use: ['style-loader', 'css-loader?modules', 'sass-loader']
-			// },
-
-			// {
-			// 	test: /\.(sass|scss)$/,
-			// 	exclude: [SCSS_FOLDER, /node_modules/],
-			// 	loader: ExtractTextPlugin.extract({
-			// 		fallback: 'style-loader',
-			// 		use: ['css-loader?modules', 'sass-loader']
-			// 	})
-			// },
-
-			// {
-			// 	test: /\.(sass|scss)$/,
-			// 	exclude: [SCSS_FOLDER, /node_modules/],
-			// 	loader: ExtractTextPlugin.extract({
-			// 		fallback: 'style-loader',
-			// 		use: ['style-loader', 'css-loader?modules', 'sass-loader']
-			// 	})
-			// },
-
-			// {
-			// 	test: /\.(sass|scss)$/,
-			// 	exclude: [SCSS_FOLDER, /node_modules/],
-			// 	loader: extractSCSSSingle.extract(['style-loader', 'css-loader?modules', 'sass-loader'])
-			// },
-
-			// {
-			// 	test: /\.(sass|scss)$/,
-			// 	exclude: [SCSS_FOLDER, /node_modules/],
-			// 	use: ['style-loader', 'css-loader?modules', 'sass-loader']
-			// },
 			{
 				test: /\.(sass|scss)$/,
 				include: SCSS_FOLDER,
@@ -170,6 +113,43 @@ classes={{
 };
 
 module.exports = config;
+
+// {
+// 	test: /\.(sass|scss)$/,
+// 	include: INCLUDE_SCSS_FOLDER,
+// 	exclude: [SCSS_FOLDER, /node_modules/],
+// 	use: ['style-loader', 'css-loader?modules', 'sass-loader']
+// },
+
+// {
+// 	test: /\.(sass|scss)$/,
+// 	exclude: [SCSS_FOLDER, /node_modules/],
+// 	loader: ExtractTextPlugin.extract({
+// 		fallback: 'style-loader',
+// 		use: ['css-loader?modules', 'sass-loader']
+// 	})
+// },
+
+// {
+// 	test: /\.(sass|scss)$/,
+// 	exclude: [SCSS_FOLDER, /node_modules/],
+// 	loader: ExtractTextPlugin.extract({
+// 		fallback: 'style-loader',
+// 		use: ['style-loader', 'css-loader?modules', 'sass-loader']
+// 	})
+// },
+
+// {
+// 	test: /\.(sass|scss)$/,
+// 	exclude: [SCSS_FOLDER, /node_modules/],
+// 	loader: extractSCSSSingle.extract(['style-loader', 'css-loader?modules', 'sass-loader'])
+// },
+
+// {
+// 	test: /\.(sass|scss)$/,
+// 	exclude: [SCSS_FOLDER, /node_modules/],
+// 	use: ['style-loader', 'css-loader?modules', 'sass-loader']
+// },
 
 // new ExtractTextPlugin({
 // 	// define where to save the file

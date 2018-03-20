@@ -5,7 +5,6 @@ import { createMuiTheme } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Button from 'material-ui/Button';
 
-import App from '../components/App';
 import Classes from './Classes';
 import ClassNames from './ClassNames';
 
@@ -56,7 +55,6 @@ const Main = () => (
 		<div className="alphabetagamma">anything</div>
 		<div className="delta">delta</div>
 		<div className="main">jv</div>
-		{/* <App /> */}
 		{/* <AppBar color="primary">AppBar 1</AppBar>
 		<AppBar color="secondary">AppBar 2</AppBar> */}
 		{/* <AppBar classname="delta">AppBar 3</AppBar> */}

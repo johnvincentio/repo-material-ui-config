@@ -1,3 +1,20 @@
+    		/*
+    		const styles = theme => ({
+    drawerPaper: {
+        width: 250
+    }
+
+});
+
+classes={{
+paper: classes.drawerPaper,
+}}
+classes={{
+paper: `SASS_CLASS_NAME_HERE`,
+}}
+
+\*/
+
 You can compose multiple Higher Order Components:
 
 export default muiThemeable()(connect(mapStateToProps)(ComponentName));
