@@ -13,17 +13,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-// const extractCSS = new ExtractTextPlugin({
-// 	filename: '[name].bundle.css',
-// 	allChunks: true
-// });
-
-// const extractSCSSSingle = new ExtractTextPlugin({
-// 	// define where to save the file
-// 	filename: 'jv.css',
-// 	allChunks: true
-// });
-
 const extractSCSSBundle = new ExtractTextPlugin({
 	// define where to save the file
 	filename: '[name].bundle.css',
@@ -33,7 +22,8 @@ const extractSCSSBundle = new ExtractTextPlugin({
 require('dotenv').config(); // load from .env file
 
 const config = {
-	entry: ['./src/index.jsx', './src/scss/index.scss', './src/components/main.scss'],
+	// entry: ['./src/index.jsx', './src/scss/index.scss', './src/components/main.scss'],
+	entry: ['./src/index.jsx', './src/scss/index.scss'],
 
 	output: {
 		path: path.resolve('dist'),
