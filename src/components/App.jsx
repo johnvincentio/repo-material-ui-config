@@ -1,15 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import { Grid, Paper, Typography, List, IconButton } from 'material-ui';
-import { ListItem, ListItemText, ListItemSecondaryAction } from 'material-ui/List';
 
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import purple from 'material-ui/colors/purple';
 import Button from 'material-ui/Button';
 
+// https://www.appnovation.com/blog/first-look-material-ui-front-end-developer
+
 /*
+
+import purple from 'material-ui/colors/purple';
+import red from 'material-ui/colors/red';
+
+const primary = red[500]; // #F44336
+const accent = purple['A200']; // #E040FB
+const accent2 = purple.A200; // #E040FB (alternative method)
+
+
 background-color: #617fde;
 border-color: #5474db
 
@@ -85,39 +92,39 @@ const App = props => (
 		<Button color="primary" component={Link1}>
 			Classes
 		</Button>
-		<Button color="primary" component={Link2}>
+		<Button color="secondary" component={Link2}>
 			Class Names
 		</Button>
 		<Button color="primary" component={Link3}>
 			Custom Styles
 		</Button>
-		<Button color="primary" component={Link4}>
+		<Button color="secondary" component={Link4}>
 			Dark Themes
 		</Button>
 		<Button color="primary" component={Link5}>
 			Inline Style
 		</Button>
 		<br />
-		<Button color="primary" component={Link6}>
+		<Button color="secondary" component={Link6}>
 			Nested
 		</Button>
 		<Button color="primary" component={Link7}>
 			Palette
 		</Button>
-		<Button color="primary" component={Link8}>
+		<Button color="secondary" component={Link8}>
 			Typography
 		</Button>
 		<Button color="primary" component={Link9}>
 			Typography Theme
 		</Button>
 		<br />
-		<Button color="primary" component={Link10}>
+		<Button color="secondary" component={Link10}>
 			Typography Theme2
 		</Button>
 		<Button color="primary" component={Link11}>
 			WithTheme
 		</Button>
-		<Button color="primary" component={Link12}>
+		<Button color="secondary" component={Link12}>
 			Scss
 		</Button>
 		<br />
