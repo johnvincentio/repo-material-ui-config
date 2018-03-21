@@ -9,6 +9,32 @@ import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import purple from 'material-ui/colors/purple';
 import Button from 'material-ui/Button';
 
+/*
+background-color: #617fde;
+border-color: #5474db
+
+rgb(80, 105, 196) #5069c4
+
+#26AFEB
+#337ab7
+
+feediator
+#2d3e50
+#1f8dd
+
+*/
+
+/*
+$primary-color-dark:   #1976D2
+$primary-color:        #2196F3
+$primary-color-light:  #BBDEFB
+$primary-color-text:   #FFFFFF
+$accent-color:         #FF5722
+$primary-text-color:   #212121
+$secondary-text-color: #757575
+$divider-color:        #BDBDBD
+*/
+
 // const styles = theme => ({
 // 	root: {
 // 		width: '100%',
@@ -52,6 +78,8 @@ const Link9 = props => <Link to="/typographyTheme" {...props} />;
 const Link10 = props => <Link to="/typographyTheme2" {...props} />;
 const Link11 = props => <Link to="/withTheme" {...props} />;
 
+const Link12 = props => <Link to="/scss" {...props} />;
+
 const App = props => (
 	<MuiThemeProvider theme={theme}>
 		<Button color="primary" component={Link1}>
@@ -82,11 +110,15 @@ const App = props => (
 		<Button color="primary" component={Link9}>
 			TypographyT heme
 		</Button>
+		<br />
 		<Button color="primary" component={Link10}>
 			Typography Theme2
 		</Button>
 		<Button color="primary" component={Link11}>
 			WithTheme
+		</Button>
+		<Button color="primary" component={Link12}>
+			Scss
 		</Button>
 		<br />
 		<Button target="_blank" href="http://www.google.com/">
@@ -99,45 +131,6 @@ const App = props => (
 );
 
 export default App;
-
-/*
-		<Button color="primary">Primary</Button>
-		<Button color="secondary">Secondary</Button>
-
-<Link to="/classes/">
-							<ListItemText primary="Classes" />
-						</Link>
-*/
-/*
-	<nav className="header-nav">
-		<ul>
-			<li>
-				<Link to="/classes/">Classes</Link>
-			</li>
-		</ul>
-	</nav>
-*/
-/*
-import React, { PropTypes } from 'react';
-import { Link, IndexLink } from 'react-router';
-
-function Main(props) {
-  return (
-    <div>
-      <ul>
-        <li><IndexLink to="/" activeStyle={{ color: 'red' }}>Home</IndexLink></li>
-        <li><Link to="/counter" activeStyle={{ color: 'red' }}>Counter</Link></li>
-      </ul>
-      {React.cloneElement(props.children, props)}
-    </div>
-  );
-}
-Main.propTypes = {
-  children: PropTypes.any.isRequired
-};
-
-export default Main;
-*/
 
 /*
 		<Button classes={{ button: `jv` }} className="jv">

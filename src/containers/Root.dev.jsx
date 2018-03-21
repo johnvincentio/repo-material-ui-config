@@ -20,6 +20,8 @@ import MainTypographyTheme from '../components/typographyTheme/Main';
 import MainTypographyTheme2 from '../components/typographyTheme2/Main';
 import MainWithTheme from '../components/withTheme/Main';
 
+import MainScss from '../components/Scss';
+
 const Root = ({ store }) => (
 	<Provider store={store}>
 		<div>
@@ -37,6 +39,8 @@ const Root = ({ store }) => (
 				<Route exact path="/typographyTheme" component={MainTypographyTheme} />
 				<Route exact path="/typographyTheme2" component={MainTypographyTheme2} />
 				<Route exact path="/withTheme" component={MainWithTheme} />
+
+				<Route exact path="/scss" component={MainScss} />
 			</Switch>
 			{/* <div className="devtools">
 				<DevTools />
