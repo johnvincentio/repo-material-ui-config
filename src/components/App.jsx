@@ -45,13 +45,20 @@ const Link3 = props => <Link to="/customStyles" {...props} />;
 const Link4 = props => <Link to="/darkThemes" {...props} />;
 const Link5 = props => <Link to="/inlineStyle" {...props} />;
 
+const Link6 = props => <Link to="/nested" {...props} />;
+const Link7 = props => <Link to="/palette" {...props} />;
+const Link8 = props => <Link to="/typography" {...props} />;
+const Link9 = props => <Link to="/typographyTheme" {...props} />;
+const Link10 = props => <Link to="/typographyTheme2" {...props} />;
+const Link11 = props => <Link to="/withTheme" {...props} />;
+
 const App = props => (
 	<MuiThemeProvider theme={theme}>
 		<Button color="primary" component={Link1}>
 			Classes
 		</Button>
 		<Button color="primary" component={Link2}>
-			ClassNames
+			Class Names
 		</Button>
 		<Button color="primary" component={Link3}>
 			Custom Styles
@@ -61,6 +68,25 @@ const App = props => (
 		</Button>
 		<Button color="primary" component={Link5}>
 			Inline Style
+		</Button>
+		<br />
+		<Button color="primary" component={Link6}>
+			Nested
+		</Button>
+		<Button color="primary" component={Link7}>
+			Palette
+		</Button>
+		<Button color="primary" component={Link8}>
+			Typography
+		</Button>
+		<Button color="primary" component={Link9}>
+			TypographyT heme
+		</Button>
+		<Button color="primary" component={Link10}>
+			Typography Theme2
+		</Button>
+		<Button color="primary" component={Link11}>
+			WithTheme
 		</Button>
 		<br />
 		<Button target="_blank" href="http://www.google.com/">

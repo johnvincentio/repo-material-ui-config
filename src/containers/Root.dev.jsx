@@ -13,6 +13,13 @@ import MainCustomStyles from '../components/customStyles/Main';
 import MainDarkThemes from '../components/darkThemes/Main';
 import MainInlineStyle from '../components/inlineStyle/Main';
 
+import MainNested from '../components/nested/Main';
+import MainPalette from '../components/palette/Main';
+import MainTypography from '../components/typography/Main';
+import MainTypographyTheme from '../components/typographyTheme/Main';
+import MainTypographyTheme2 from '../components/typographyTheme2/Main';
+import MainWithTheme from '../components/withTheme/Main';
+
 const Root = ({ store }) => (
 	<Provider store={store}>
 		<div>
@@ -23,6 +30,13 @@ const Root = ({ store }) => (
 				<Route exact path="/customStyles" component={MainCustomStyles} />
 				<Route exact path="/darkThemes" component={MainDarkThemes} />
 				<Route exact path="/inlineStyle" component={MainInlineStyle} />
+
+				<Route exact path="/nested" component={MainNested} />
+				<Route exact path="/palette" component={MainPalette} />
+				<Route exact path="/typography" component={MainTypography} />
+				<Route exact path="/typographyTheme" component={MainTypographyTheme} />
+				<Route exact path="/typographyTheme2" component={MainTypographyTheme2} />
+				<Route exact path="/withTheme" component={MainWithTheme} />
 			</Switch>
 			{/* <div className="devtools">
 				<DevTools />
