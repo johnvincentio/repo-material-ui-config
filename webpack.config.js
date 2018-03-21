@@ -2,19 +2,18 @@ const webpack = require('webpack');
 const path = require('path');
 
 const APP_FOLDER = path.resolve(__dirname, './src');
-const SCSS_FOLDER = path.resolve(__dirname, './src/scss');
+const SCSS_FOLDER = path.resolve(__dirname, './scss');
 const ASSETS_FOLDER = path.resolve(__dirname, './src/assets');
 const DIST_FOLDER = path.resolve(APP_FOLDER, './dist');
-const DIST_FOLDER_STYLE = path.resolve(DIST_FOLDER, './css');
+// const DIST_FOLDER_STYLE = path.resolve(DIST_FOLDER, './css');
 
-const INCLUDE_SCSS_FOLDER = path.resolve(__dirname, './src/components');
+const INCLUDE_SCSS_FOLDER = path.resolve(__dirname, './src');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const extractSCSSBundle = new ExtractTextPlugin({
-	// define where to save the file
 	filename: '[name].bundle.css',
 	allChunks: true
 });
@@ -23,10 +22,10 @@ require('dotenv').config(); // load from .env file
 
 const config = {
 	// entry: ['./src/index.jsx', './src/scss/index.scss', './src/components/main.scss'],
-	entry: ['./src/index.jsx', './src/scss/index.scss'],
+	entry: ['./src/index.jsx', './scss/index.scss'],
 
 	output: {
-		path: path.resolve('dist'),
+		path: DIST_FOLDER,
 		filename: 'bundle.js'
 	},
 
@@ -34,7 +33,7 @@ const config = {
 	// devtool: 'eval-source-map',		// development
 	//	devtool: 'source-map',	// production
 	devServer: {
-		contentBase: path.join(__dirname, 'dist'),
+		contentBase: DIST_FOLDER,
 		compress: false, // true
 		// inline: true,
 		port: 8045,
@@ -92,12 +91,6 @@ const config = {
 	plugins: [
 		new webpack.EnvironmentPlugin(['NODE_ENV', 'API_KEY']),
 		extractSCSSBundle,
-		// extractSCSSSingle,
-		// new ExtractTextPlugin({
-		// 	// define where to save the file
-		// 	filename: '[name].bundle.css',
-		// 	allChunks: true
-		// }),
 		new CopyWebpackPlugin([{ from: 'index.html', to: '.' }], { debug: 'info' })
 	]
 };

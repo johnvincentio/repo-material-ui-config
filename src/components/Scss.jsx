@@ -5,7 +5,7 @@ import Button from 'material-ui/Button';
 
 // import classes from './main.scss';
 
-import './main.scss';
+import './scss.scss';
 
 const theme = createMuiTheme({
 	palette: {
@@ -28,12 +28,12 @@ const Scss = () => (
 	<MuiThemeProvider theme={theme}>
 		<Button color="primary">Primary Button</Button>
 		<Button color="secondary">Secondary Button</Button>
+		<br />
 		<Button classes={{ root: 'main' }}>button, classes root: main, injected</Button>
 		<Button classes={{ root: 'jv2' }}>button, classes root: jv2, injected</Button>
 		<div className="alphabetagamma">div, class alphabetagamma, from bundle</div>
 		<div className="delta">div, class delta, from bundle</div>
 		<div className="main">div, class main, injected</div>
-		<br />
 	</MuiThemeProvider>
 );
 

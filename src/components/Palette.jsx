@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import purple from 'material-ui/colors/purple';
 import Button from 'material-ui/Button';
@@ -12,12 +12,16 @@ const theme = createMuiTheme({
 
 function Palette() {
 	return (
-		<MuiThemeProvider theme={theme}>
-			<div>
-				<Button color="primary">Primary</Button>
-				<Button color="secondary">Secondary</Button>
-			</div>
-		</MuiThemeProvider>
+		<Fragment>
+			<Button color="primary">Primary Button</Button>
+			<Button color="secondary">Secondary Button</Button>
+			<MuiThemeProvider theme={theme}>
+				<div>
+					<Button color="primary">Primary Button, new Theme</Button>
+					<Button color="secondary">Secondary Button, new Theme</Button>
+				</div>
+			</MuiThemeProvider>
+		</Fragment>
 	);
 }
 
