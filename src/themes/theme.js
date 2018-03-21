@@ -18,6 +18,26 @@ export const baseTheme = createMuiTheme({
 	}
 });
 
+// const theme1 = createMuiTheme({
+// 	status: {
+// 		color: orange[500]
+// 	}
+// });
+
+// const theme2 = outerTheme => ({
+// 	...outerTheme,
+// 	status: {
+// 		color: green[500]
+// 	}
+// });
+
+// const theme3 = outerTheme => ({
+// 	...outerTheme,
+// 	status: {
+// 		color: pink[500]
+// 	}
+// });
+
 export const theme = createMuiTheme({
 	palette: {
 		primary: { main: purple[500] }, // Purple and green play nicely together.

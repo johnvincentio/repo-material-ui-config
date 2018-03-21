@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import WithTheme2 from './WithTheme2';
+import WithTheme from './WithTheme';
 
 const theme = createMuiTheme({
 	palette: {
@@ -10,9 +10,12 @@ const theme = createMuiTheme({
 
 function DarkTheme() {
 	return (
-		<MuiThemeProvider theme={theme}>
-			<WithTheme2 />
-		</MuiThemeProvider>
+		<Fragment>
+			<WithTheme />
+			<MuiThemeProvider theme={theme}>
+				<WithTheme />
+			</MuiThemeProvider>
+		</Fragment>
 	);
 }
 

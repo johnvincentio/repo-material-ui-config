@@ -5,16 +5,16 @@ import App from '../components/App';
 
 import MainClasses from '../components/Classes';
 import MainClassnames from '../components/ClassNames';
-import MainCustomStyles from '../components/customStyles/Main';
-import MainDarkThemes from '../components/darkThemes/Main';
-import MainInlineStyle from '../components/inlineStyle/Main';
+import MainCustomStyles from '../components/CustomStyles';
+import MainDarkThemes from '../components/darkThemes/DarkTheme';
+import MainInlineStyle from '../components/InlineStyle';
 
-import MainNested from '../components/nested/Main';
-import MainPalette from '../components/palette/Main';
-import MainTypography from '../components/typography/Main';
-import MainTypographyTheme from '../components/typographyTheme/Main';
-import MainTypographyTheme2 from '../components/typographyTheme2/Main';
-import MainWithTheme from '../components/withTheme/Main';
+import MainNested from '../components/Nested';
+import MainPalette from '../components/Palette';
+import MainTypography from '../components/Typography';
+import MainTypographyTheme from '../components/TypographyTheme';
+import MainTypographyTheme2 from '../components/TypographyTheme2';
+import MainWithTheme from '../components/WithTheme';
 
 import MainScss from '../components/Scss';
 

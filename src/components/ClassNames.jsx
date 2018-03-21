@@ -6,7 +6,6 @@ import Button from 'material-ui/Button';
 import { buttonClass } from '../themes/styles';
 
 function ClassNames(props) {
-	console.log('props.classes ', props.classes);
 	return (
 		<Button className={props.classes.button}>
 			{props.children ? props.children : 'class names'}

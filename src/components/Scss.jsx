@@ -26,6 +26,8 @@ const theme = createMuiTheme({
 
 const Scss = () => (
 	<MuiThemeProvider theme={theme}>
+		<Button color="primary">Primary Button</Button>
+		<Button color="secondary">Secondary Button</Button>
 		<Button classes={{ root: 'main' }}>button, classes root: main, injected</Button>
 		<Button classes={{ root: 'jv2' }}>button, classes root: jv2, injected</Button>
 		<div className="alphabetagamma">div, class alphabetagamma, from bundle</div>

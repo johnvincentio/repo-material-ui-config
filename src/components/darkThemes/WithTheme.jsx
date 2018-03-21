@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'material-ui/Button';
 
-function WithTheme2() {
+function WithTheme() {
 	return (
 		<div>
 			<Button color="primary">Primary</Button>
@@ -10,4 +10,4 @@ function WithTheme2() {
 	);
 }
 
-export default WithTheme2;
+export default WithTheme;
