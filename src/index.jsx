@@ -12,6 +12,7 @@ import Root from './containers/Root';
 
 const store = configureStore();
 
+console.log('theme ', theme);
 console.log(`API_KEY ${process.env.API_KEY}`);
 
 document.addEventListener('DOMContentLoaded', () => {

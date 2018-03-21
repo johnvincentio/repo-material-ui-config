@@ -21,8 +21,6 @@ const theme = createMuiTheme({
 	}
 });
 
-console.log('theme ', theme);
-
 const Main = () => (
 	<MuiThemeProvider theme={theme}>
 		<CustomStyles />

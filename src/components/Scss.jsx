@@ -24,8 +24,6 @@ const theme = createMuiTheme({
 	}
 });
 
-console.log('theme ', theme);
-
 const Scss = () => (
 	<MuiThemeProvider theme={theme}>
 		<Button classes={{ root: 'main' }}>button, classes root: main, injected</Button>
