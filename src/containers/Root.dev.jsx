@@ -5,13 +5,18 @@ import { Switch, Route } from 'react-router-dom';
 
 // import DevTools from './DevTools';
 
-import Main from '../components/Main';
+import App from '../components/App';
+
+import MainClasses from '../components/classes/Main';
+import MainClassnames from '../components/classNames/Main';
 
 const Root = ({ store }) => (
 	<Provider store={store}>
 		<div>
 			<Switch>
-				<Route path="/" component={Main} />
+				<Route exact path="/" component={App} />
+				<Route exact path="/classes" component={MainClasses} />
+				<Route exact path="/classnames" component={MainClassnames} />
 			</Switch>
 			{/* <div className="devtools">
 				<DevTools />
