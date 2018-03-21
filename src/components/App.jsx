@@ -40,7 +40,10 @@ const theme = createMuiTheme({
 });
 
 const Link1 = props => <Link to="/classes" {...props} />;
-const Link2 = props => <Link to="/classnames" {...props} />;
+const Link2 = props => <Link to="/classNames" {...props} />;
+const Link3 = props => <Link to="/customStyles" {...props} />;
+const Link4 = props => <Link to="/darkThemes" {...props} />;
+const Link5 = props => <Link to="/inlineStyle" {...props} />;
 
 const App = props => (
 	<MuiThemeProvider theme={theme}>
@@ -50,6 +53,16 @@ const App = props => (
 		<Button color="primary" component={Link2}>
 			ClassNames
 		</Button>
+		<Button color="primary" component={Link3}>
+			Custom Styles
+		</Button>
+		<Button color="primary" component={Link4}>
+			Dark Themes
+		</Button>
+		<Button color="primary" component={Link5}>
+			Inline Style
+		</Button>
+		<br />
 		<Button target="_blank" href="http://www.google.com/">
 			Google
 		</Button>
