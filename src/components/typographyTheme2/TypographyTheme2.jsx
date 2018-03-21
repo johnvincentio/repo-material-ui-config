@@ -49,7 +49,7 @@ function TypographyTheme2(props) {
 }
 
 TypographyTheme2.propTypes = {
-	classes: PropTypes.object.isRequired
+	classes: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default withStyles(styles)(TypographyTheme2);

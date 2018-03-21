@@ -17,7 +17,7 @@ let CustomCheckbox = props => (
 );
 
 CustomCheckbox.propTypes = {
-	classes: PropTypes.object.isRequired
+	classes: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 CustomCheckbox = withStyles(styles)(CustomCheckbox);

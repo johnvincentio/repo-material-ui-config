@@ -19,7 +19,7 @@ let NestedCheckbox = props => (
 );
 
 NestedCheckbox.propTypes = {
-	classes: PropTypes.object.isRequired
+	classes: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 NestedCheckbox = withStyles(styles)(NestedCheckbox);

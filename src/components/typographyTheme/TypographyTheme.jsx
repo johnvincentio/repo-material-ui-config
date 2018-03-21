@@ -11,7 +11,7 @@ function TypographyTheme(props) {
 }
 
 TypographyTheme.propTypes = {
-	classes: PropTypes.object.isRequired
+	classes: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default withStyles(styles)(TypographyTheme);

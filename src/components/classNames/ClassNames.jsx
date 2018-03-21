@@ -26,7 +26,7 @@ function ClassNames(props) {
 
 ClassNames.propTypes = {
 	children: PropTypes.node,
-	classes: PropTypes.object.isRequired
+	classes: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 };
 
 export default withStyles(styles)(ClassNames);
