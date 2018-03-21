@@ -108,7 +108,7 @@ const App = props => (
 			Typography
 		</Button>
 		<Button color="primary" component={Link9}>
-			TypographyT heme
+			Typography Theme
 		</Button>
 		<br />
 		<Button color="primary" component={Link10}>

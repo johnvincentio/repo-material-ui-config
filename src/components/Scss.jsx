@@ -28,11 +28,11 @@ console.log('theme ', theme);
 
 const Scss = () => (
 	<MuiThemeProvider theme={theme}>
-		<Button classes={{ root: 'main' }}>Default</Button>
-		<Button classes={{ root: 'jv2' }}>JV2</Button>
-		<div className="alphabetagamma">anything</div>
-		<div className="delta">delta</div>
-		<div className="main">jv</div>
+		<Button classes={{ root: 'main' }}>button, classes root: main, injected</Button>
+		<Button classes={{ root: 'jv2' }}>button, classes root: jv2, injected</Button>
+		<div className="alphabetagamma">div, class alphabetagamma, from bundle</div>
+		<div className="delta">div, class delta, from bundle</div>
+		<div className="main">div, class main, injected</div>
 		<br />
 	</MuiThemeProvider>
 );
