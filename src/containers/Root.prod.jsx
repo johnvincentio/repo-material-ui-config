@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { Switch } from 'react-router-dom';
 
-import Routes from './Routes';
+import Routes from '../routes/Routes';
 
 const Root = ({ store }) => (
 	<Provider store={store}>

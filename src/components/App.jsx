@@ -1,76 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import purple from 'material-ui/colors/purple';
 import Button from 'material-ui/Button';
-
-// https://www.appnovation.com/blog/first-look-material-ui-front-end-developer
-
-/*
-
-import purple from 'material-ui/colors/purple';
-import red from 'material-ui/colors/red';
-
-const primary = red[500]; // #F44336
-const accent = purple['A200']; // #E040FB
-const accent2 = purple.A200; // #E040FB (alternative method)
-
-
-background-color: #617fde;
-border-color: #5474db
-
-rgb(80, 105, 196) #5069c4
-
-#26AFEB
-#337ab7
-
-feediator
-#2d3e50
-#1f8dd
-
-*/
-
-/*
-$primary-color-dark:   #1976D2
-$primary-color:        #2196F3
-$primary-color-light:  #BBDEFB
-$primary-color-text:   #FFFFFF
-$accent-color:         #FF5722
-$primary-text-color:   #212121
-$secondary-text-color: #757575
-$divider-color:        #BDBDBD
-*/
-
-// const styles = theme => ({
-// 	root: {
-// 		width: '100%',
-// 		maxWidth: 360,
-// 		backgroundColor: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)'
-// 	}
-// });
-
-// const styles = {
-// 	root: {
-// 		background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-// 		borderRadius: 3,
-// 		border: 0,
-// 		color: 'white',
-// 		height: 48,
-// 		padding: '0 30px',
-// 		boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .30)'
-// 	},
-// 	label: {
-// 		textTransform: 'capitalize'
-// 	}
-// };
-
-const theme = createMuiTheme({
-	palette: {
-		primary: { main: purple[500] }, // Purple and green play nicely together.
-		secondary: { main: '#11cb5f' } // This is just green.A700 as hex.
-	}
-});
 
 const Link1 = props => <Link to="/classes" {...props} />;
 const Link2 = props => <Link to="/classNames" {...props} />;
@@ -87,8 +18,8 @@ const Link11 = props => <Link to="/withTheme" {...props} />;
 
 const Link12 = props => <Link to="/scss" {...props} />;
 
-const App = props => (
-	<MuiThemeProvider theme={theme}>
+const App = () => (
+	<Fragment>
 		<Button color="primary" component={Link1}>
 			Classes
 		</Button>
@@ -134,32 +65,7 @@ const App = props => (
 		<Button target="_blank" href="#classes">
 			href #classes
 		</Button>
-	</MuiThemeProvider>
+	</Fragment>
 );
 
 export default App;
-
-/*
-		<Button classes={{ button: `jv` }} className="jv">
-
-classes={{
-  paper: `SASS_CLASS_NAME_HERE`,
-}}
-*/
-/*
-const muiTheme = {
-  palette: {
-    textColor: colors.grey200,
-    primary1Color: '#ffce00',
-    accent1Color: colors.redA200,
-    accent2Color: colors.redA400,
-    accent3Color: colors.redA100,
-  },
-  table: {
-    height: 'calc(100vh - 122px)'
-  },
-  tableHeaderColumn: {
-    fontSize: '14px'
-  }
-};
-*/

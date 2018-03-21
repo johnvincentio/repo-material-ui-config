@@ -3,8 +3,8 @@ import { Route } from 'react-router-dom';
 
 import App from '../components/App';
 
-import MainClasses from '../components/classes/Main';
-import MainClassnames from '../components/classNames/Main';
+import MainClasses from '../components/Classes';
+import MainClassnames from '../components/ClassNames';
 import MainCustomStyles from '../components/customStyles/Main';
 import MainDarkThemes from '../components/darkThemes/Main';
 import MainInlineStyle from '../components/inlineStyle/Main';
