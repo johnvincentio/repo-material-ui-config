@@ -3,8 +3,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { createMuiTheme } from 'material-ui/styles';
 import Button from 'material-ui/Button';
 
-// import classes from './main.scss';
-
 import './scss.scss';
 
 const theme = createMuiTheme({
