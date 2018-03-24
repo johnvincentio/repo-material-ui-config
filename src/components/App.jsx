@@ -18,6 +18,8 @@ const Link11 = props => <Link to="/withTheme" {...props} />;
 
 const Link12 = props => <Link to="/scss" {...props} />;
 
+const Link13 = props => <Link to="/test1" {...props} />;
+
 const App = () => (
 	<Fragment>
 		<Button color="primary" component={Link1}>
@@ -64,6 +66,10 @@ const App = () => (
 		</Button>
 		<Button target="_blank" href="#classes">
 			href #classes
+		</Button>
+		<br />
+		<Button color="secondary" component={Link13}>
+			Test Nav Links
 		</Button>
 	</Fragment>
 );

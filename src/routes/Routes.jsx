@@ -18,6 +18,8 @@ import MainWithTheme from '../components/WithTheme';
 
 import MainScss from '../components/Scss';
 
+import MainTest1 from '../components/Test1';
+
 const Routes = () => (
 	<Fragment>
 		<Route exact path="/" component={App} />
@@ -35,6 +37,8 @@ const Routes = () => (
 		<Route exact path="/withTheme" component={MainWithTheme} />
 
 		<Route exact path="/scss" component={MainScss} />
+
+		<Route exact path="/test1" component={MainTest1} />
 	</Fragment>
 );
 
